@@ -1,6 +1,7 @@
 import { Component, Type } from '@angular/core';
 import { UsersComponent } from '../users/users.component';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent extends Type {
   dataUsuario = new UsersComponent();
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private modal: NgbModal) {
     super();
   }
   onSubmit(usuario: String, password: String) {
@@ -18,7 +19,6 @@ export class LoginComponent extends Type {
       this.router.navigate(['/home']);
     } else {
       alert('Error en las credenciales');
-      window.location.reload();
     }
   }
 }

@@ -11,10 +11,12 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UsersComponent } from './users/users.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, HomepageComponent, UsersComponent],
-  imports: [BrowserModule, routing, FormsModule, HttpClientModule],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HomepageComponent, UsersComponent, PrincipalComponent],
+  imports: [BrowserModule, routing, FormsModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

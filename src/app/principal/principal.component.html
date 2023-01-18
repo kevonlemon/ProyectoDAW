@@ -1,0 +1,111 @@
+<style>
+    @import url('https://fonts.cdnfonts.com/css/luminari');
+</style>
+
+
+<!-- BARRA DE NAVEGACION -->
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+            <a class="letraslogo" href="#">
+                BOOKGEON
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbarPrincipal" id="navbarColor02">
+                <ul container class="navbar-nav me-auto ">
+                    <li>
+                        <button type="button" class="btn btn-dark" (click)="modal.open(contenido)">Iniciar
+                            Sesión</button>
+                    </li>
+                    <li item class="nav-item">
+                        <a class="nav-link" href="register">Registrarse
+                        </a>
+                    </li>
+                    <li item class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- CARRUSEL  -->
+<ngb-carousel class="carrusel">
+    <ng-template ngbSlide>
+        <div class="elementocarrusel">
+            <img class="imagencarrusel" src="../../assets/imagenes/comic.jpg" alt="Random first slide" />
+            <div class="textoelementocarrusel">
+                <h3 class="letrascarrusel">COMIC</h3>
+                <p class="letrascarrusel">Lo mejor del comic americano con las historias de tus heroes favoritos</p>
+            </div>
+            <img class="imagencarrusel" src="../../assets/imagenes/comic2.jpg" alt="Random first slide" />
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="elementocarrusel">
+            <img class="imagencarrusel" src="../../assets/imagenes/manga.jpg" alt="Random second slide" />
+            <div class="textoelementocarrusel">
+                <h3 class="letrascarrusel">MANGA</h3>
+                <p class="letrascarrusel">Los más leidos del momento</p>
+            </div>
+            <img class="imagencarrusel" src="../../assets/imagenes/manga2.jpg" alt="Random second slide" />
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="elementocarrusel">
+            <img class="imagencarrusel" src="../../assets/imagenes/book.jpg" alt="Random third slide" />
+            <div class="textoelementocarrusel">
+                <h3 class="letrascarrusel">NOVELAS Y LIBROS</h3>
+                <p class="letrascarrusel">Los libros y novelas más populares de tus autores favoritos</p>
+            </div>
+            <img class="imagencarrusel" src="../../assets/imagenes/book2.webp" alt="Random third slide" />
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+<!-- QUIENES SOMOS  -->
+<div class="cuerpo">
+    <div>
+        <h2>QUIENES SOMOS?</h2>
+        <h5>Somos el grupo 7 de la materia de Desarrollo Web Avanzado</h5>
+        <p><strong>Integrado por:</strong></p>
+        <p> Kevin Falcones Torres <br>Michael Panches Iñiguez <br>Ximena Sanchez Reyes <br>Francis Cardenas Ortiz </p>
+        <p><strong>Nuestro tema de proyecto es:</strong> E-commerce de Libros</p>
+    </div>
+</div>
+
+
+<ng-template #contenido let-modal>
+    <div class="mimodal">
+
+        <div class="botoncabecera">
+            <button type="button" class="botonequis" aria-label="close" (click)="modal.dismiss()">
+                <img class="imagenbotonsalir" src="../../assets/imagenes/cross2.png" />
+            </button>
+        </div>
+        <div class="modal-cuerpo">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label mt-4">Usuario</label>
+                    <input type="text" name="usuario" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Ingrese su Usuario" #usuario>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="form-label mt-4">Contraseña</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Ingrese su Contraseña" #password>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-light" type="submit" (click)="onSubmit(usuario.value, password.value)">Iniciar
+                Sesión</button>
+        </div>
+
+    </div>
+</ng-template>

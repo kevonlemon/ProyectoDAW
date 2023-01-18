@@ -1,17 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* app/styles.css */
 
-* {
-  box-sizing: border-box;
-}
-html,
 body {
-  background: #ecf0f3;
+  background-size: fixed;
+  background-position: center center;
+  background-size: 50rem;
+  background: #253642;
+  background-image: url("./assets/imagenes/fondo.jpg");
 }
-h1 {
-  margin: 0;
-  padding: 0;
-}
+
 .custom-form {
   min-width: 300px;
   max-width: 60%;
@@ -25,6 +22,7 @@ h1 {
   color: black;
   margin-top: 10rem;
 }
+
 .custom-form input {
   display: block;
   margin: 2rem 0;
@@ -37,6 +35,7 @@ h1 {
   border: 0 none;
   background: #ebf5fc;
 }
+
 .custom-form button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -51,4 +50,151 @@ h1 {
   border-radius: 1.5rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
+}
+
+
+.letraslogo {
+  margin-left: 3rem;
+  font-size: 2rem;
+  font-family: "Luminari";
+}
+
+.navbarPrincipal {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbarPrincipal li {
+  padding-right: 1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav {
+  margin-bottom: 3rem;
+  background-color: rgb(10, 10, 10)
+}
+
+.carrusel {
+  background-color: rgb(10, 10, 10);
+  justify-content: center;
+}
+
+.elementocarrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagencarrusel {
+  width: 15rem;
+}
+
+.textoelementocarrusel {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.letrascarrusel {
+  color: white;
+  text-align: center;
+}
+
+.cuerpo {
+  color: white;
+  margin-top: 3rem;
+  background-color: rgb(10, 10, 10);
+}
+
+.cuerpo div {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.cuerpo h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.cuerpo h5 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.cuerpo p {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.mimodal {
+  color: rgb(255, 255, 255);
+  padding-top: 0rem;
+  background-color: rgb(10, 10, 10);
+}
+
+.botoncabecera {
+  display: flex;
+  justify-content: right;
+}
+
+.botonequis {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0;
+  border: none;
+  background: none;
+
+}
+
+.modal-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-cabecera h4 {
+  padding: 0;
+  align-self: left;
+  padding-top: 1rem;
+}
+
+.imagenbotonsalir {
+  width: 1.5rem
+}
+
+.modal-cuerpo {
+  margin-bottom: 2rem
+}
+
+.cuerpo2 {
+  height: 20rem;
+  color: white;
+  margin-top: 3rem;
+  background-color: rgb(10, 10, 10);
+}
+
+.cuerpo2 div {
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.cuerpo2 h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.imagenbienvenida {
+  margin-top: 2rem;
 }
