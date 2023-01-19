@@ -1,0 +1,32 @@
+<mat-card class="cartilla">
+    <div class="cabeceraCartilla" style="text-align:center;">
+        <mat-card-title><strong>Modificar Cliente</strong></mat-card-title>
+    </div>
+    <br>
+    <form [formGroup]="clienteNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" [(ngModel)]="data.nombres" formControlName="nombres">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" [(ngModel)]="data.apellidos" formControlName="apellidos">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Cedula" [(ngModel)]="data.cedula" formControlName="cedula">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Direccion" [(ngModel)]="data.direccion" formControlName="direccion">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Edad" [(ngModel)]="data.edad" formControlName="edad">
+        </mat-form-field>
+        <div class="modal-footer2">
+            <button class="btn btn-light" [disabled]="!clienteNuevo.valid" (click)="onSubmit()">Guardar</button>
+            <button class="btn btn-light" color="accent" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+
+</mat-card>

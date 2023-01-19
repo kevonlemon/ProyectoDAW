@@ -1,0 +1,32 @@
+<mat-card class="cartilla">
+    <div class="cabeceraCartilla" style="text-align:center;">
+        <mat-card-title><strong>Agregar Libro</strong></mat-card-title>
+    </div>
+    <br>
+    <form [formGroup]="libroNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Titulo" formControlName="titulo">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Autor" formControlName="autor">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Sinopsis" formControlName="sinopsis">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Editorial" formControlName="editorial">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Precio" formControlName="precio">
+        </mat-form-field>
+        <div class="modal-footer2">
+            <button class="btn btn-light" [disabled]="!libroNuevo.valid" (click)="onSubmit()">Aceptar</button>
+            <button class="btn btn-light" color="accent" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+
+</mat-card>

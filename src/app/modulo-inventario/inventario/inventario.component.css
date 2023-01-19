@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400&display=swap');
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+
+button{
+    font-family: 'Viga', sans-serif;
+    padding: 8px 10px;
+    background-color: rgb(33, 43, 46);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+
+}
+
+button:hover{
+    background-color: #83cbe9;
+    
+}
+

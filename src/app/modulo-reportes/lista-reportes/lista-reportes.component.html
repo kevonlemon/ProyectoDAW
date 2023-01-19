@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<!-- BARRA DE NAVEGACION -->
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="letraslogo" href="home">
+        BOOKGEON
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbarPrincipal" id="navbarColor02">
+        <ul container class="navbar-nav me-auto ">
+
+          <li item class="nav-item">
+            <a class="nav-link" routerLink="/inventario">Inventario</a>
+          </li>
+
+          <li item class="nav-item">
+            <a class="nav-link" routerLink="/clientes">Clientes</a>
+          </li>
+
+          <li item class="nav-item">
+            <a class="nav-link" routerLink="/reportes">Reportes</a>
+          </li>
+
+          <li item class="nav-item">
+            <a class="btn btn-dark" href="">Cerrar Sesión
+            </a>
+          </li>
+
+          <li item class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<body>
+
+
+  <div class="datagrid">
+    <div class="datagrid2" style="margin-left: 2%; margin-right: 2%;">
+      <br>
+
+      <mat-form-field>
+        <input class="cajabusqueda" matInput (keyup)="filtrar($event)" placeholder="Buscar Reporte">
+      </mat-form-field>
+
+      <button style="margin-left: 10px; color: white;" (click)="openDialogAgregar()"> Agregar</button>
+
+      <br>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
+        <ng-container matColumnDef="asunto">
+          <th mat-header-cell *matHeaderCellDef> Asunto </th>
+          <td mat-cell *matCellDef="let element"> {{element.asunto}} </td>
+        </ng-container>
+        <ng-container matColumnDef="detalles">
+          <th mat-header-cell *matHeaderCellDef> Detalles </th>
+          <td mat-cell *matCellDef="let element"> {{element.detalles}} </td>
+        </ng-container>
+        <ng-container matColumnDef="involucrados">
+          <th mat-header-cell *matHeaderCellDef> Ivolucrados </th>
+          <td mat-cell *matCellDef="let element"> {{element.involucrados}} </td>
+        </ng-container>
+        <ng-container matColumnDef="conclusion">
+          <th mat-header-cell *matHeaderCellDef> Conclusion </th>
+          <td mat-cell *matCellDef="let element"> {{element.conclusion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef> Fecha </th>
+          <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+        </ng-container>
+        <ng-container matColumnDef="acciones">
+          <th width="130" mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let row; let i=index;">
+            <button style="color: white;"
+              (click)="openDialogModificar(i, row.asunto, row.detalles, row.involucrados, row.conclusion, row.fecha)"><mat-icon>edit</mat-icon></button>
+            <button style="margin-left: 5px; color: white; background-color: rgb(223, 57, 57);"
+              (click)="openDialogEliminar(i)"><mat-icon>delete</mat-icon></button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+<footer class="footers-modulos">
+  <div>
+    <h6>Grupo 7 Desarrollo Web Avanzado</h6>
+  </div>
+</footer>
+
+</html>

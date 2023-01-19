@@ -198,3 +198,70 @@ nav {
 .imagenbienvenida {
   margin-top: 2rem;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.datagrid {
+  background-color: rgb(10, 10, 10);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.datagrid2 {
+  padding: 3rem;
+}
+
+.footers-modulos {
+  height: 5rem;
+  color: white;
+  margin-top: 3rem;
+  background-color: rgb(10, 10, 10);
+}
+
+.footers-modulos div {
+  display: flex;
+  justify-content: center;
+}
+
+.footers-modulos h6 {
+  margin-top: 2rem;
+}
+
+.cajabusqueda {
+  color: white;
+}
+
+.modal-footer2 {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-footer2 button {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-family: 'Viga', sans-serif;
+  background-color: rgb(10, 10, 10);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  align-items: center;
+}
+
+.cabeceraCartilla {
+  margin-top: 2rem;
+}

@@ -1,0 +1,32 @@
+<mat-card class="cartilla">
+    <div class="cabeceraCartilla" style="text-align:center;">
+        <mat-card-title><strong>Cliente</strong></mat-card-title>
+    </div>
+    <br>
+    <form [formGroup]="clienteNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Nombres" formControlName="nombres">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Apellidos" formControlName="apellidos">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Cedula" formControlName="cedula">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Direccion" formControlName="direccion">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Edad" formControlName="edad">
+        </mat-form-field>
+        <div class="modal-footer2">
+            <button class="btn btn-light" [disabled]="!clienteNuevo.valid" (click)="onSubmit()">Aceptar</button>
+            <button class="btn btn-light" color="accent" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+
+</mat-card>

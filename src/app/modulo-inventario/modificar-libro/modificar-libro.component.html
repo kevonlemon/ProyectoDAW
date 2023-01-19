@@ -1,0 +1,32 @@
+<mat-card class="cartilla">
+    <div class="cabeceraCartilla" style="text-align:center;">
+        <mat-card-title>Modificar Libro</mat-card-title>
+    </div>
+    <br>
+    <form [formGroup]="libroNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Titulo" [(ngModel)]="data.titulo" formControlName="titulo">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Autor" [(ngModel)]="data.autor" formControlName="autor">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Sinopsis" [(ngModel)]="data.sinopsis" formControlName="sinopsis">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Editorial" [(ngModel)]="data.editorial" formControlName="editorial">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Precio" [(ngModel)]="data.precio" formControlName="precio">
+        </mat-form-field>
+        <div class="modal-footer2">
+            <button class="btn btn-light" [disabled]="!libroNuevo.valid" (click)="onSubmit()">Guardar</button>
+            <button class="btn btn-light" color="accent" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+
+</mat-card>

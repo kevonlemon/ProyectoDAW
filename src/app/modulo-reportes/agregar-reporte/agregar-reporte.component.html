@@ -1,0 +1,32 @@
+<mat-card class="cartilla">
+    <div class="cabeceraCartilla" style="text-align:center;">
+        <mat-card-title><strong>Agregar Reporte</strong></mat-card-title>
+    </div>
+    <br>
+    <form [formGroup]="reporteNuevo">
+        <mat-form-field class="campos-field">
+            <input matInput type="text" class="form-control" placeholder="Asunto" formControlName="asunto">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput type="text" class="form-control" placeholder="Detalles" formControlName="detalles">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput type="text" class="form-control" placeholder="Involucrados" formControlName="involucrados">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput type="text" class="form-control" placeholder="Conclusion" formControlName="conclusion">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input matInput type="text" class="form-control" placeholder="Fecha" formControlName="fecha">
+        </mat-form-field>
+        <div class="modal-footer2">
+            <button class="btn btn-light" [disabled]="!reporteNuevo.valid" (click)="onSubmit()">Aceptar</button>
+            <button class="btn btn-light" color="accent" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+
+</mat-card>
